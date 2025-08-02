@@ -2,7 +2,7 @@ name: Build and publish Docker image to GHCR
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 env:
@@ -41,5 +41,5 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ github.repository }}:${{ env.TAG }}
           build-args: |
             CNPG_TAG=16
-            PGVECTORS_TAG=v0.2.0
+            PGVECTORS_TAG=v0.3.0
             TARGETARCH=amd64
